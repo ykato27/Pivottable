@@ -5,25 +5,26 @@
 ```
 .
 ├── README.md                 READMEファイル
+├── .dockerignore        
 ├── Dockerfile                Dockerファイル
+├── docker-compose.yml
 └── notebook                  jupyter notebook
 ```
 
 ## 環境構築
-Dockderfileがあるホスト側のフォルダへ移動（例：Desktop/Pivottable）
+
+* Dockderfileがあるホスト側のフォルダへ移動（例：Desktop/Pivottable）
 ```
 cd Desktop/Pivottable
 ```
-Dockerによる環境構築
+
+* Dockerによる環境構築（フォルダをマウント：Desktop/Pivottable）
 ```
-docker build .
+docker-compose up --build
 ```
-docker run実行（対象フォルダをマウントする／例：Desktop/Pivottable）
-```
-docker run -p 8888:8888 -v ~/Desktop/Pivottable/:/work --name Pivottable <docker image>
-```
-ブラウザーを立ち上げてlocalhost:8888へアクセス
-workフォルダ内が対象フォルダにマウントされている
+
+* ブラウザーを立ち上げてlocalhost:8888へアクセス
+* ローカルフォルダがマウントされている
 
 ## jupyter notebook説明
 * Pivottable.ipynb : ピボットテーブルのnotebook
