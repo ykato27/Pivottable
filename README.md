@@ -20,7 +20,7 @@ cd Desktop/Pivottable
 
 * Dockerによる環境構築（フォルダをマウント：Desktop/Pivottable）
 ```
-docker-compose up --build
+docker-compose up
 ```
 
 * ブラウザーを立ち上げてlocalhost:8888へアクセス
